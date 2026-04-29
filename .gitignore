@@ -1,0 +1,13 @@
+venv/
+backend/venv/
+__pycache__/
+*.pyc
+.env
+data/
+logs/
+results/
+uploads/
+larvaemodal/results/
+larvaemodal/logs/
+larvaemodal/data/
+larvaemodal/dataset/

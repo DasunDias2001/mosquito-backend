@@ -1,0 +1,70 @@
+# Mosquito Larvae Classification Configuration
+
+# Dataset Configuration
+dataset:
+  base_path: "dataset"
+  classes:
+    - "Aedes aegypti"           # Note: Space in name to match your folder
+    - "Culex quinquefasciatus"
+  image_size: [224, 224]
+  validation_split: 0.2
+  test_split: 0.1
+  seed: 42
+
+# Data Augmentation
+augmentation:
+  enabled: true
+  rotation_range: 30
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  shear_range: 0.2
+  zoom_range: 0.2
+  horizontal_flip: true
+  vertical_flip: true
+  brightness_range: [0.8, 1.2]
+  fill_mode: "nearest"
+
+# Model Configuration
+model:
+  architecture: "efficientnet_b3"  # Options: efficientnet_b0, efficientnet_b3, resnet50, mobilenet_v2, inception_v3
+  input_shape: [224, 224, 3]
+  num_classes: 2
+  dropout_rate: 0.5
+  pretrained: true
+  fine_tune_from_layer: 100  # Unfreeze layers from this index for fine-tuning
+
+# Training Configuration
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.0001
+  optimizer: "adam"
+  loss: "categorical_crossentropy"
+  metrics: ["accuracy", "precision", "recall", "auc"]
+  
+  # Learning Rate Schedule
+  lr_schedule:
+    enabled: true
+    patience: 5
+    factor: 0.5
+    min_lr: 0.000001
+  
+  # Early Stopping
+  early_stopping:
+    enabled: true
+    patience: 15
+    restore_best_weights: true
+  
+  # Model Checkpoint
+  checkpoint:
+    enabled: true
+    save_best_only: true
+    monitor: "val_accuracy"
+    mode: "max"
+
+# Output Configuration
+output:
+  model_dir: "models"
+  logs_dir: "logs"
+  results_dir: "results"
+  save_format: "h5"  # Options: h5, savedmodel

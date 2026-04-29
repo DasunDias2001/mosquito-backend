@@ -1,0 +1,35 @@
+# Deep Learning Framework - Compatible with Python 3.12
+tensorflow==2.18.0
+keras==3.8.0
+
+# Image Processing
+opencv-python==4.10.0.84
+Pillow==11.0.0
+scikit-image==0.24.0
+
+# Data Science
+numpy==1.26.4
+pandas==2.2.3
+matplotlib==3.9.3
+seaborn==0.13.2
+
+# Data Augmentation
+albumentations==1.4.24
+imgaug==0.4.0
+
+# Model Utilities
+scikit-learn==1.6.1
+
+# Progress Tracking
+tqdm==4.67.1
+
+# Visualization
+tensorboard==2.18.0
+
+# Model Export
+onnx==1.17.0
+tf2onnx==1.16.1
+
+# Utilities
+pyyaml==6.0.2
+python-dotenv==1.0.1

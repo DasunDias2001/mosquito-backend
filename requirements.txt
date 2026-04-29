@@ -1,0 +1,24 @@
+# Core Deep Learning (Python 3.12 compatible)
+tensorflow==2.16.1
+keras==3.0.5
+
+# Data Processing
+numpy==1.26.4
+pandas==2.2.0
+Pillow==10.2.0
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.1
+
+# Machine Learning Utilities
+scikit-learn==1.4.0
+
+# Progress Bars
+tqdm==4.66.1
+
+# Image Processing
+opencv-python==4.9.0.80
+
+# Utilities
+pyyaml==6.0.1
