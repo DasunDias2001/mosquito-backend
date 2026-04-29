@@ -22,3 +22,6 @@ opencv-python==4.9.0.80
 
 # Utilities
 pyyaml==6.0.1
+fastapi
+uvicorn
+python-multipart
