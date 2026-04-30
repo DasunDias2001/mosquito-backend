@@ -17,7 +17,7 @@ scikit-learn==1.4.0
 tqdm==4.66.1
 
 # Image Processing
-opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
 
 # Utilities
 pyyaml==6.0.1
