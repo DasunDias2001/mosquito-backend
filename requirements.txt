@@ -1,6 +1,5 @@
 # Core Deep Learning (Python 3.12 compatible)
 tensorflow==2.20.0
-keras==3.0.5
 
 # Data Processing
 numpy==1.26.4
